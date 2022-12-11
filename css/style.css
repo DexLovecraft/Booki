@@ -1,0 +1,839 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500;700&display=swap');
+
+html, body{
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    font-family: 'Raleway',sans-serif;
+    font-weight: 500;
+    /*Clamp is for the fluidity of all the text of the page*/
+    font-size: clamp(11px, calc(11px + ((1vw - 9.92px) * 0.8291)), 23px);
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+/*Header section css code*/
+/*All header elements who have a heignt of 12vh*/
+
+header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo{
+    margin-left: 6%;
+    margin-top: 2%;
+    height: 55px;
+}
+
+nav{
+    margin: 0 80px 0 80px;
+    width: 20%;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+li{
+    height: 12vh;
+    font-size: 120%;
+    width: 110%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+a{
+    color: #000;
+    text-decoration: none;
+}
+.decoration{
+    border-top: #fff 4px solid;
+}
+.decoration:hover{
+    border-top: #0065FC 4px solid;
+}
+
+.decoration:hover a{
+    color: #0065FC;
+    position: relative;
+}
+
+
+/*For all the same title of the page*/
+.title{
+    font-weight: 700;
+    font-size: 170%;
+}
+
+/*Serche_area and associated element css code*/
+.search_zone{
+    margin-top: 50px;
+    margin-left: 4%;
+}
+
+.search_zone p{
+    font-size: 20px;
+    margin-top: -0.5%;
+}
+
+.search_zone form{
+    margin-top: 2%;
+}
+
+.search_bar{
+    display: flex;
+    width: 450px;
+    border-radius: 10px;
+    height: 45px;
+}
+
+.search_bar .marker{
+    height: 45px;
+    width: 55px;
+    background-color: #F2F2F2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 9px 0 0 9px;
+}
+
+.search_bar input[type=text]{
+    height: 41px;
+    width: 250px;
+    margin: 0;
+    border-radius: 0;
+    border: solid 1.5px #F2F2F2;
+}
+
+.search_bar input[type=text]::placeholder{
+    color: #000;
+    font-size: 120%;
+    font-weight: 700;
+    position: relative;
+    left: 15px;
+}
+
+.search_bar span{
+    font-weight: 700;
+    background-color: #0065FC;
+    color: #FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 290px;
+    z-index: 1;
+    border-radius:0 9px 9px 0;
+}
+
+.loupe{
+    background-color: #0065FC;
+    color: #0065FC;
+    height: 45px;
+    width: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius:0 9px 9px 0;
+    position: relative;
+    right: 200px;
+    z-index: 0;
+}
+
+/*Filter selection ection css code*/
+.filter_zone{
+    margin: 1% auto 1% 4%;
+}
+
+.filter_zone article{
+    display: flex;
+    align-items: center;
+}
+
+.filter_zone article h3{
+    font-size: 25px;
+}
+
+.sidefilter{
+    display: flex;
+}
+
+.filter{
+    display: flex;
+    margin: 0 15px 0 15px;
+    align-items: center;
+    height: 55px;
+    border-radius: 45px;
+    border: 2px solid #F2F2F2;
+}
+
+.filter i{
+    height: 55px;
+    width: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0065FC;
+    background-color: #DEEBFF;
+    border-radius: 45px;
+    border: 2px #DEEBFF solid;
+    margin-left: -2px;
+    font-size: 20px;
+}
+
+.filter p{
+    margin: auto 20px auto 10px;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.filter:hover{
+    border: 2px solid #0065FC;
+}
+
+.filter:hover i{
+    color:#DEEBFF;
+    background-color: #0065FC;
+    border: 2px solid #0065FC
+}
+
+.info{
+    display: flex;
+    align-items: center;
+    margin-top: 1%;
+}
+
+.info i{
+    border: 1.5px #DEEBFF solid;
+    color: #0065FC;
+    height: 25px;
+    width: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    font-size: 19px;
+}
+
+.info p{
+    margin-left: 1%;
+}
+
+/*Main content*/
+.housing_zone{
+    display: flex;
+    align-items: start;
+    height: 75vh;
+    margin: 1% auto 10% auto;
+}
+.house, .trending{
+    padding: 2%;
+}
+
+/*Housing components*/
+.house{
+    padding-top: 20px;
+    flex: 2;
+    margin: 2% 2% 0 4%;
+    background-color: #F2F2F2;
+    border-radius: 25px;
+    height: 75vh;
+}
+
+.house h2{
+    margin: 5% 0 5% 0;
+}
+
+.house p{
+    font-weight: 700;
+    font-size: 120%;
+}
+
+.house_top{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5%;
+    padding: 0;
+    height:30%;
+}
+
+.house_bottom{
+    display: flex;
+    justify-content: space-between;
+    height: 30%;
+    margin-bottom: 0;
+}
+
+/*For all house card*/
+.card{
+    background-color: #fff;
+    width: 30%;
+    height: 110%;
+    border-radius: 25px;
+    box-shadow:0px 5px 20px 0px rgba(0,0,0,0.39);
+}
+
+.card img{
+    width: 95%;
+    height: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2% auto;
+    border-radius: 24px 24px 0 0;
+    object-fit: cover;
+}
+
+.card h4{
+    margin: 3% 0 0 10%;
+    font-size: 100%;
+}
+.card p{
+    margin: 1% 0 0 10%;
+    font-weight: 400;
+    font-size: 90%;
+}
+
+.card .star{
+    margin: 1% 0 0 10%;
+    font-size: 85%;
+}
+
+.card .bold{
+    font-weight: 700;
+}
+/*for all star */
+.full{
+    color: #0065FC;
+}
+
+.empty{
+    color: #F2F2F2;
+}
+
+.more{
+    margin:  6% auto;
+}
+
+/*Trending components*/
+.trending{
+    flex: 1;
+    margin: 2% 4% 0 2%;
+    background-color: #F2F2F2;
+    border-radius: 25px;
+    height: 73.5vh;
+}
+
+.trending_title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.trending_title i{
+    font-size: 170%;
+}
+
+/*card in trending*/
+.card_trend_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 85%;
+}
+
+.card_trend{
+    height: 30%;
+    width: 100%;
+    border-radius: 25px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    box-shadow:0px 5px 20px 0px rgba(0,0,0,0.39);
+}
+
+.card_trend img{
+    width: 30%;
+    height: 92%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1.5% auto 1.5% 1.5%;
+    border-radius: 24px 0 0 24px;
+    object-fit: cover;
+}
+
+.card_trend_text{
+    margin: 7% 0 7% 2%;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    font-size: 100%;
+}
+
+.card_trend_text h4{
+    margin: 0 0 0 2% ;
+}
+
+.card_trend_text p{
+    margin: 0 0 0 2% ;
+}
+
+.card_trend_text .star{
+    margin: 20% 0 0 2% ;
+}
+
+/*activty zone*/
+.activity_zone{
+    height: 75vh;
+    margin: 3%;
+}
+
+.activity_zone h2{
+    margin: 1%;
+}
+
+.activity_zone a{
+    border-radius: 25px;
+}
+
+.activity{
+    display: flex;
+}
+
+.card_activity_column{
+    width: 25%;
+    height: 75vh;
+    margin: 1%;
+}
+
+.card_activity{
+    box-shadow:0px 5px 20px 0px rgba(0,0,0,0.39);
+    border-radius: 25px;
+}
+
+.card_activity img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+}
+
+.card_activity h4{
+    background-color: #FFF;
+    border-radius:0 0 25px 25px;
+    display: flex;
+    align-items: center;
+    padding-left: 4%;
+    position: relative;
+}
+
+.right .left{
+    display: flex;
+    flex-direction: column;
+}
+
+.card_right_top{
+    height: 58%;
+    margin-bottom: 7%;
+}
+
+.card_right_bot{
+    height: 38%;
+}
+
+.card_left_top{
+    height: 51%;
+    margin-bottom: 7%;
+}
+
+.card_left_bot{
+    height: 45%;
+}
+
+.card_activity_large h4{
+    height: 10%;
+    bottom: 13%;
+}
+
+.card_right_top h4{
+    height: 17.5%;
+    bottom: 23%;
+}
+
+.card_right_bot h4{
+    height: 27%;
+    bottom: 36%;
+}
+
+.card_left_top h4{
+    height: 20%;
+    bottom: 26.5%;
+}
+
+.card_left_bot h4{
+    height: 22%;
+    bottom: 29.5%;
+}
+
+/*For Footer*/
+
+footer{
+    background-color: #F2F2F2;
+    margin-top: 8%;
+    padding: 2% 2% 2% 4%;
+    display: flex;
+}
+
+footer section{
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+}
+
+footer section a{
+    margin-top: 2%;
+}
+
+footer section a span:hover{
+    color: #0065FC;
+}
+
+/*Responsive code*/
+/*tablet*/
+@media (max-width:992px){
+    html, body{
+        font-size: 16px;
+    }
+
+    li{
+        font-size: 100%;
+        margin-left: 10px;
+    }
+
+    .title{
+        font-size: 120%;
+    }
+
+    .filter_zone article{
+        flex-wrap: wrap;
+    }
+
+    .filter_zone article h3{
+        font-size: 150%;
+    }
+
+    .filter{
+        height: 60px;
+        margin-top: 10px;
+        font-size: 150%;
+    }
+
+    .filter i{
+        height: 60px;
+        width: 60px;
+    }
+
+    .housing_zone{
+        flex-direction: column-reverse;
+        justify-content: center;
+        height: 295vh;
+        margin-top: 100px;
+    }
+
+    .house, .trending{
+        margin: auto;
+        width: 80%;
+    }
+
+    .house .title, .trending .title{
+        width: 80%;
+        font-size: 150%;
+    }
+
+    .card_trend_container{
+        align-items: center;
+    }   
+
+    .card_trend{
+        width: 477px;
+        height: 172px;
+        margin-bottom: 25px;
+    }
+
+    .card_trend_text{
+        font-size: 140%;
+        margin-right: 10px;
+    }
+
+    .trending .star{
+        margin-top: 60px;
+    }
+
+    .house{
+        margin-top: 50px;
+        height: 10px;
+        height: 210vh;
+    }
+
+    .house_top, .house_bottom{
+        flex-direction: column;
+        height: 43%;
+        margin: 0 auto 0 auto;
+        align-items: center;
+    }
+
+    .card{
+        width: 477px;
+        display: flex;
+        height: 172px;
+        margin-bottom: 25px;
+        margin-right: 0;
+    }
+
+    .card img{
+        width: 30%;
+        height: 92%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 1.5%;
+        border-radius: 24px 0 0 24px;
+        object-fit: cover;
+    }
+
+    .card_text{
+        width: 100%;
+        font-size: 145%;
+        margin: 10px;
+    }
+    .card h4{
+        margin: 0 0 0 2% ;
+    }
+    
+    .card p{
+        margin: 0 0 0 2%;
+    }
+
+    .card .star{
+        margin: 20% 0 0 2%;
+    }
+
+    .activity_zone{
+        height: 160vh;
+    }
+
+    .activity{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .card_activity_column{
+        width: 294px;
+    }
+}
+
+@media (max-width: 768px){
+    html, body{
+        height: 100%;
+    }
+
+    header{
+        flex-direction: column;
+        height: 20vh;
+    }
+
+    .top{
+        height: 25vh;
+    }
+
+    .logo{
+        object-position: right;
+        object-fit: contain;
+        height: 90px;
+        width: 250px;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+    }
+
+    nav{
+        height: 6vh;
+        width: 100%;
+        margin: 0;
+    }
+
+    ul{
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    li{
+        width: 50%;
+        height: 6vh;
+        margin: 0;
+    }
+
+    #decoration{
+        border-top: 0;
+        border-bottom: #0065FC 4px solid;
+    }
+
+    .search_bar span{
+        background-color: #FFF;
+        z-index: 0;
+    }
+
+    .loupe{
+        color: #FFF;
+        z-index: 1;
+    }
+
+    main{
+        position: relative;
+        top: 450px;
+    }
+
+    .house{
+        width: 90%;
+        height: 325vh;
+    }
+
+    .house_top, .house_bottom{
+        height: 150vh;
+    }
+
+    .trending{
+        width: 90%;
+    }
+
+    .card {
+        background-color: #fff;
+        width: 90%;
+        height: 110%;
+        border-radius: 25px;
+        box-shadow:0px 5px 20px 0px rgba(0,0,0,0.39);
+        flex-direction: column;
+    }
+    
+    .card img{
+        aspect-ratio: 3/1;
+        width: 95%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 2% auto;
+        border-radius: 24px 24px 0 0;
+        object-fit: cover;
+    }
+    
+    .card h4 {
+        margin: 3% 0 0 10%;
+        font-size: 100%;
+    }
+    .card p{
+        margin: 1% 0 0 10%;
+        font-weight: 400;
+        font-size: 90%;
+    }
+    
+    .card .star{
+        margin: 1% 0 0 10%;
+        font-size: 85%;
+    }
+    
+    .card .bold{
+        font-weight: 700;
+    }
+    /*for all star */
+    .full{
+        color: #0065FC;
+    }
+    
+    .empty{
+        color: #F2F2F2;
+    }
+
+    .card_trend{
+        width: 90%;
+    }
+
+    .card_trend_text{
+        font-size: 95%;
+    }
+
+    .card_trend_text .star{
+        margin: 0;
+    }
+    
+    .activity_zone{
+        height: 200vh;
+        position: relative;
+        top: 450px;
+    }
+
+    .activity_zone h2{
+        position: relative;
+        top: 0px;
+    }
+
+    .card_activity{
+        height: 50vh;
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    .card_activity h4{
+        height: 60px;
+    }
+
+    .card_activity_column{
+        height: auto;
+        width: 86%;
+    }
+    
+    .card_activity_large h4{
+        bottom: 17%;
+    }
+
+    .card_right_top h4{
+        bottom: 20%;
+    }
+    
+    .card_right_bot h4{
+        bottom: 20%;
+    }
+    
+    .card_left_top h4{
+        bottom: 20%;
+    }
+    
+    .card_left_bot h4{
+        bottom: 20%;
+    }
+
+    footer{
+        position: relative;
+        top: 285vh;
+        flex-direction: column;
+    }
+
+    footer section{
+        width: 80%;
+    }
+}
+
+@media (min-aspect-ratio:19/9){
+    body{
+        width: 80%;
+        margin: auto;
+        justify-content: center;
+        font-size: 75%;
+    }
+}
